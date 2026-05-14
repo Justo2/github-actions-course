@@ -8,15 +8,15 @@ on:
   workflow_dispatch:
     inputs:
       debug:
-        description: Debug mode
+        description: Debug
         type: boolean
         default: false
 
 jobs:
-  echo: #fixed issue at line 17
+  echo: 
     runs-on: ubuntu-latest
     steps:
-      - name: [debug] Print start up data
+      - name: "[debug] Print start-up data"
         if: ${{ inputs.debug }}
         run: |
         
@@ -25,3 +25,11 @@ jobs:
           echo "Repository: ${{ github.repository }}"
           echo "Runner OS: ${{ runner.os }}"
           echo "Commit SHA: ${{ github.sha }}"
+
+
+
+
+
+
+
+          
