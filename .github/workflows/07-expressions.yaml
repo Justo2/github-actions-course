@@ -6,13 +6,14 @@ on:
       - main
 
   workflow_dispatch:
-     input: 
-        name: debug
+    inputs:
+      debug:
+        description: Debug mode
         type: boolean
         default: false
-    
+
 jobs:
-  echo:
+  echo: #fixed issue at line 17
     runs-on: ubuntu-latest
     steps:
       - name: [debug] Print start-up data
